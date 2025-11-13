@@ -7,7 +7,6 @@ def split_at_digit(formula):
       return (prefix, number)
   return (formula, '1')
 
-
 def split_before_each_uppercase(formula):
   parts = []
   if not formula:
