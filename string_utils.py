@@ -8,15 +8,16 @@ def split_at_digit(formula):
   return (formula, '1')
 
 
-index = 0
-parts = []
-current_part = " "
 def split_before_each_uppercase(formula):
-  for index in range(1, len(formula)):
-    if formula[index].isupper() and current_part != "":
+  parts = []
+  if not formula:
+    return parts
+  current_part = formula[0]
+  for char in formula [1:]:
+    if char.isupper():
       parts.append(current_part)
-      current_part = 'index'
-    else:
-      current_part += 'index'
-   
+      current_part = char
+    else :
+      current_part += char
+  parts.append (current_part)
   return parts
