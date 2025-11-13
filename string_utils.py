@@ -1,12 +1,3 @@
-i = 0
-def split_at_digit(formula):
-  for i in range(len(formula)):
-    if formula[i].isdigit():
-      prefix = formula [:i]
-      number = int (formula[i:])
-      return (prefix, number)
-  return (formula, '1')
-
 def split_before_each_uppercase(formula):
   parts = []
   if not formula:
@@ -20,3 +11,15 @@ def split_before_each_uppercase(formula):
       current_part += char
   parts.append (current_part)
   return parts
+
+
+i = 0
+def split_at_digit(formula):
+  for i in range(len(formula)):
+    if formula[i].isdigit():
+      prefix = formula [:i]
+      number = int (formula[i:])
+      return (prefix, number)
+  return (formula, '1')
+
+
